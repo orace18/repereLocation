@@ -56,21 +56,7 @@ class BookmarkPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-          ),        ],
-      ),
+     
     );
   }
 }

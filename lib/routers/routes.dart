@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:kimo/pages/home_page/controllers/home_binding.dart';
 import 'package:kimo/pages/home_page/index.dart';
+import 'package:kimo/pages/main_page/index.dart';
 import 'package:kimo/pages/onboarding_page/controllers/onboarding_binding.dart';
 import 'package:kimo/pages/onboarding_page/index.dart';
 import 'package:kimo/pages/splash_page/controllers/splash_binding.dart';
@@ -20,8 +21,8 @@ class AppRouter {
     ),
     GetPage(
       name: '/home',
-      page: () => HomePage(),
-      binding: HomeBinding(),
+      page: () => MainPage(),
+     // binding: HomeBinding(),
     ),
   ];
 }

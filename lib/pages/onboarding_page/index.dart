@@ -45,7 +45,7 @@ class OnboardingPage extends GetWidget<OnboardingController> {
             body: IntroductionScreen(
               pages: pages,
               dotsDecorator: DotsDecorator(
-                  activeColor: Colors.redAccent,
+                  activeColor: Colors.blueAccent,
                   spacing: EdgeInsets.only(left:5, right: 5, bottom:30)
               ),
               onDone: () {
@@ -63,7 +63,7 @@ class OnboardingPage extends GetWidget<OnboardingController> {
                 "skip".tr,
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
-                  color: Colors.grey,
+                  color: kimoGrise,
                 ),
               ),
               next: Text("next".tr),
@@ -71,7 +71,7 @@ class OnboardingPage extends GetWidget<OnboardingController> {
                 padding:
                 EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0, bottom: 10.0),
                 decoration: BoxDecoration(
-                  color: AppTheme.kimoMaterial[300],
+                  color: AppTheme.kimoMaterial[500],
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),

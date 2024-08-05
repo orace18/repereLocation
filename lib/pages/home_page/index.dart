@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:kimo/pages/bookmark_page/index.dart';
-import 'package:kimo/pages/calendar_page/index.dart';
 import 'package:kimo/pages/home_page/widgets/central_card.dart';
-import 'package:kimo/pages/profil_page/index.dart';
 import '../../helpers/constantes.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,14 +9,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomePage> {
-  int _currentIndex = 0;
-
-  final List<Widget> _pages = [
-    HomePage(),
-    BookmarkPage(),
-    CalendarPage(),
-    ProfilePage(),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +18,16 @@ class _HomeScreenState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         title: Padding(
           padding: const EdgeInsets.only(top: 10.0),
-          child: Text(
-            'Angèle, ATOLOU',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-            ),
+          child: Row(
+            children: [
+              Text(
+                'Angèle, ATOLOU',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -46,7 +39,7 @@ class _HomeScreenState extends State<HomePage> {
             Text(
               'Trouver le meilleur endroit où rester pour vous.',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -60,7 +53,7 @@ class _HomeScreenState extends State<HomePage> {
               searchBoxInputDecoration: InputDecoration(
                 hintText: 'Rechercher une maison',
                 filled: true,
-                fillColor: kimoBlanche,
+                fillColor: kimoGrise,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
                   borderSide: BorderSide.none,
@@ -87,6 +80,9 @@ class _HomeScreenState extends State<HomePage> {
                 print('$item selected');
               },
             ),
+            SizedBox(
+              height: 10,
+            ),
             Row(
               children: [
                 Text("Populaire"),
@@ -97,35 +93,14 @@ class _HomeScreenState extends State<HomePage> {
                 )
               ],
             ),
-            CentralCard(),
+               SizedBox(
+              height: 10,
+            ),
+            //CentralCard(),
             // Ajout du card du bar avec chevron que je n'ai pas encore fait 
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: kimoBlue,
-        unselectedItemColor: kimoGrise,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-          ),
-        ],
+        //CentralCard(),
       ),
     );
   }

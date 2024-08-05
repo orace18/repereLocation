@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kimo/helpers/constantes.dart';
 
-class CentralCard extends GetWidget {
+class CentralCard extends StatelessWidget {
 
   String image = "https://imgs.search.brave.com/ObXihJG4z1QzK0MRYIAOfy8VIvy7dI5DH0GzUFvZSNk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS1jZG4udHJpcGFk/dmlzb3IuY29tL21l/ZGlhL3ZyLXNwbGlj/ZS1sLzA2LzQwLzFj/L2Y5LmpwZw";
 
