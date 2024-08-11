@@ -15,21 +15,21 @@ class OnboardingPage extends GetWidget<OnboardingController> {
       "body":
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       "img": "",
-      "img_local" : "assets/onboarding/onboarding_1.png",
+      "img_local" : "assets/onboardings/onboarding_3.jpg",
     },
     {
       "title": "$appName",
       "body":
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       "img": "",
-      "img_local" : "assets/onboarding/onboarding_2.png",
+      "img_local" : "assets/onboardings/onboarding_2.jpg",
     },
     {
       "title": "$appName",
       "body":
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
       "img": "",
-      "img_local" : "assets/onboarding/onboarding_3.png",
+      "img_local" : "assets/onboardings/onboarding_3.jpg",
     },
   ];
 
@@ -51,7 +51,7 @@ class OnboardingPage extends GetWidget<OnboardingController> {
               onDone: () {
                 final box = GetStorage();
                 box.write('onboarding', true);
-                Get.toNamed('/home');
+                Get.toNamed('/inscription');
               },
               onSkip: () {
                 final box = GetStorage();

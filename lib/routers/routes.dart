@@ -1,6 +1,9 @@
 import 'package:get/get.dart';
-import 'package:kimo/pages/home_page/controllers/home_binding.dart';
-import 'package:kimo/pages/home_page/index.dart';
+import 'package:kimo/pages/connexion_page/controllers/connexion_binding.dart';
+import 'package:kimo/pages/connexion_page/index.dart';
+import 'package:kimo/pages/inscription_page/controllers/inscription_binding.dart';
+import 'package:kimo/pages/inscription_page/index.dart';
+import 'package:kimo/pages/main_page/controllers/main_binding.dart';
 import 'package:kimo/pages/main_page/index.dart';
 import 'package:kimo/pages/onboarding_page/controllers/onboarding_binding.dart';
 import 'package:kimo/pages/onboarding_page/index.dart';
@@ -22,7 +25,17 @@ class AppRouter {
     GetPage(
       name: '/home',
       page: () => MainPage(),
-     // binding: HomeBinding(),
+      binding: MainBinding(),
+    ),
+     GetPage(
+      name: '/inscription',
+      page: () => InscriptionPage(),
+      binding: InscriptionBinding(),
+    ),
+     GetPage(
+      name: '/connexion',
+      page: () => ConnexionPage(),
+      binding: ConnexionBinding(),
     ),
   ];
 }
