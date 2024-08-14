@@ -20,7 +20,7 @@ class SplashController extends GetxController{
       if(loggedIn != null){
 
       } else if(onboarded){
-        Get.offNamed('/inscription');
+        Get.offNamed('/home');
       } else {
         Get.offNamed('/onboarding');
       }

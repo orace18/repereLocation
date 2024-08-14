@@ -1,6 +1,11 @@
 import 'package:get/get.dart';
 import 'package:kimo/pages/connexion_page/controllers/connexion_binding.dart';
 import 'package:kimo/pages/connexion_page/index.dart';
+import 'package:kimo/pages/annonces_page/controllers/annonces_binding.dart';
+import 'package:kimo/pages/annonces_page/index.dart';
+import 'package:kimo/pages/annonces_page/widgets/steptwo.dart';
+import 'package:kimo/pages/home_page/controllers/home_binding.dart';
+import 'package:kimo/pages/home_page/index.dart';
 import 'package:kimo/pages/inscription_page/controllers/inscription_binding.dart';
 import 'package:kimo/pages/inscription_page/index.dart';
 import 'package:kimo/pages/main_page/controllers/main_binding.dart';
@@ -36,6 +41,21 @@ class AppRouter {
       name: '/connexion',
       page: () => ConnexionPage(),
       binding: ConnexionBinding(),
+    ),
+     GetPage(
+      name: '/acceuil',
+      page: () => HomePage(),
+      binding: HomeBinding(),
+    ),
+     GetPage(
+      name: '/steptwo',
+      page: () => StepTwoPage(),
+      binding: AnnoncesBinding(),
+    ),
+    GetPage(
+      name: '/stepone',
+      page: () => StepOnePage(),
+      binding: AnnoncesBinding(),
     ),
   ];
 }

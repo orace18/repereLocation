@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:kimo/helpers/constantes.dart';
 
@@ -99,7 +100,9 @@ class _HomeScreenState extends State<HomePage> {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                   TextButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed("/stepone");
+                    },
                     label: Text("Voir tout"),
                     icon: Icon(
                       Icons.chevron_right,
