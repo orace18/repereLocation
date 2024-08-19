@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomePage> {
                   ),
                   TextButton.icon(
                     onPressed: () {
-                      Get.toNamed("/stepone");
+                      Get.toNamed("/step");
                     },
                     label: Text("Voir tout"),
                     icon: Icon(

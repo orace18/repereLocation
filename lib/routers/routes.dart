@@ -47,14 +47,9 @@ class AppRouter {
       page: () => HomePage(),
       binding: HomeBinding(),
     ),
-     GetPage(
-      name: '/steptwo',
-      page: () => StepTwoPage(),
-      binding: AnnoncesBinding(),
-    ),
     GetPage(
-      name: '/stepone',
-      page: () => StepOnePage(),
+      name: '/step',
+      page: () => MultiStepFormPage(),
       binding: AnnoncesBinding(),
     ),
   ];

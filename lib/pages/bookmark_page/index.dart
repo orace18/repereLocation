@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kimo/helpers/constantes.dart';
+import 'package:kimo/pages/details_page/index.dart';
 
 
 class BookmarkPage extends StatelessWidget {
@@ -102,17 +103,27 @@ class BookmarkPage extends StatelessWidget {
               child: Text('Nos annonces', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             ),
             SizedBox(height: 15),
-            Padding(
+            GestureDetector(
+              child:Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 children: List.generate(2, (index) => _buildRequestCard(img1)),
               ),
             ),
-            Padding(
+            onTap: (){
+              Get.to(PropertyDetailPage());
+            },
+            ),
+            GestureDetector(
+              child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 children: List.generate(1, (index) => _buildRequestCard(img1)),
               ),
+            ),
+            onTap: (){
+Get.to(PropertyDetailPage());
+            },
             ),
           ],
         ),
